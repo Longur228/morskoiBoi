@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<style type="text/css">
+		.win{
+			width: 500px;
+			height: 500px;
+			position: absolute;
+			top: 500px; left: 950px;
+			display: none;
+		}
+		.loser{
+			width: 500px;
+			height: 500px;
+			position: absolute;
+			top: 500px; left: 950px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="col-8 mx-auto mt-5">
+		<h4 class="ms-auto">Моской бой</h4>
+		<h4 class="ms-auto">Найди и уничтожь все корабли</h4>
+		<h4 class="ms-auto">1 - 4 клеточный корабль </h4>
+		<h4 class="ms-auto">2 - 3 клеточный корабль </h4>
+		<h4 class="ms-auto">3 - 2 клеточный корабль </h4>
+		<h4 class="ms-auto">4 - 1 клеточный корабль </h4>
+		<div class="row">
+			<div class="col border border-info" style="height: 80px"></div>
+			<div class="col border border-info" style="height: 80px">1</div>
+			<div class="col border border-info" style="height: 80px">2</div>
+			<div class="col border border-info" style="height: 80px">3</div>
+			<div class="col border border-info" style="height: 80px">4</div>
+			<div class="col border border-info" style="height: 80px">5</div>
+			<div class="col border border-info" style="height: 80px">6</div>
+			<div class="col border border-info" style="height: 80px">7</div>
+			<div class="col border border-info" style="height: 80px">8</div>
+			<div class="col border border-info" style="height: 80px">9</div>
+			<div class="col border border-info" style="height: 80px">10</div>
+		</div>	
+		<div class="row">
+			<div class="col border border-info" style="height: 80px">A</div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info ship4" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info ship1" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+		</div>	
+		<div class="row">
+			<div class="col border border-info" style="height: 80px">B</div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info ship4" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info ship1" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+		</div>
+		<div class="row">
+			<div class="col border border-info" style="height: 80px">C</div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info ship4" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+		</div>	
+		<div class="row">
+			<div class="col border border-info" style="height: 80px">D</div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info ship4" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info ship3" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info ship2" style="height: 80px"></div>
+		</div>	
+		<div class="row">
+			<div class="col border border-info" style="height: 80px">E</div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info ship1" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info ship3" style="height: 80px"></div>
+			<div class="col border border-info" style="height: 80px"></div>
+			<div class="col border border-info ship2" style="height: 80px"></div>
+		</div>	
+		<div class="row">
+			<div class="col border border-info" style="height: 80px">F</div>
+			<div class="col border border-info ship3" style="height: 80px"></div>
+			<div class="col border border-info ship3" style="height: 80px"></div>
+			<div class="col border border-info ship3" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info ship3" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+		</div>	
+		<div class="row">
+			<div class="col border border-info" style="height: 80px">G</div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info ship2" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+		</div>	
+		<div class="row">
+			<div class="col border border-info" style="height: 80px">H</div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info ship2" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info ship1" style="height: 80px"></div>
+		</div>	
+		<div class="row">
+			<div class="col border border-info" style="height: 80px">I</div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info miss" style="height: 80px"></div>
+			<div class="col border border-info ship2" style="height: 80px"></div>
+			<div class="col border border-info ship2" style="height: 80px"></div>
+		</div>
+		<div class="win col-5"></div>
+		<div class="loser col-5"></div>		
+	</div>
+	<script type="text/javascript">
+		let ship1 = document.querySelectorAll(".ship1")
+
+		let ship2 = document.querySelectorAll(".ship2")
+
+		let ship3 = document.querySelectorAll(".ship3")
+
+		let ship4 = document.querySelectorAll(".ship4")
+
+		let miss = document.querySelectorAll(".miss")
+
+		let win = 0
+		let win_img = document.querySelector(".win")
+		win_img.innerHTML = win
+
+		let loser = 5
+		let loser_img = document.querySelector(".loser")
+
+
+		for (let i = 0; i < ship1.length; i = i + 1) {
+			ship1[i].onclick = function(){
+				ship1[i].style.background = "orange"
+				win = win + 1
+				document.querySelector(".win").innerHTML = win
+				if (win == 20) {
+					win_img.style.background = "url(win.png)"
+					win_img.style.backgroundSize = "100% 100%"
+					win_img.style.display = "block"
+				}
+			}
+		}
+
+		for (let i = 0; i < ship2.length; i = i + 1) {
+			ship2[i].onclick = function(){
+				ship2[i].style.background = "blue"
+				win = win + 1
+				document.querySelector(".win").innerHTML = win
+				if (win == 20) {
+					win_img.style.background = "url(win.png)"
+					win_img.style.backgroundSize = "100% 100%"
+					win_img.style.display = "block"
+				}
+			}
+		}
+
+		for (let i = 0; i < ship3.length; i = i + 1) {
+			ship3[i].onclick = function(){
+				ship3[i].style.background = "yellow"
+				win = win + 1
+				document.querySelector(".win").innerHTML = win
+				if (win == 20) {
+					win_img.style.background = "url(win.png)"
+					win_img.style.backgroundSize = "100% 100%"
+					win_img.style.display = "block"
+				
+				}
+			}
+		}
+
+		for (let i = 0; i < ship4.length; i = i + 1) {
+			ship4[i].onclick = function(){
+				ship4[i].style.background = "red"
+				win = win + 1
+				document.querySelector(".win").innerHTML = win
+				if (win == 20) {
+					win_img.style.background = "url(win.png)"
+					win_img.style.backgroundSize = "100% 100%"
+					win_img.style.display = "block"
+				}
+			}
+		}
+
+		for (let i = 0; i < miss.length; i = i + 1) {
+			miss[i].onclick = function(){
+				miss[i].style.background = "url(dream.jpg)"
+				miss[i].style.backgroundSize = "100% 100%"
+				loser = loser - 1
+				if (loser == 0) {
+					loser_img.style.background = "url(los.jpeg)"
+					loser_img.style.backgroundSize = "100% 100%"
+					loser_img.style.display = "block"
+				}
+			}
+		}
+
+
+	</script>
+</body>
+</html>
